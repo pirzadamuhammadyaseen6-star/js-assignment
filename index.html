@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h2>Even & Odd Checker</h2>
+<p>Number likhen</p>
+<input type="number" id="hy">
+
+<br><br>
+
+<button onclick="checkEvenOdd()">Check</button>
+
+<div id="result"></div>
+
+<script>
+    function checkEvenOdd() {
+let n = document.getElementById("hy").value;
+
+let hy = Number(n)
+
+if(isNaN(hy)) {
+    document.getElementById("result").innerHTML = "Enter a valid number";
+}
+
+else {
+    if (hy % 2===0) {
+        document.getElementById("result").innerHTML = "Even Number"
+    }
+
+    else {
+        document.getElementById("result").innerHTML = " Odd Number"
+    }
+}
+
+    }
+</script>
+
+
+</body>
+</html>

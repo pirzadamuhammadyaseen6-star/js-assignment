@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>Greatest of Three Numbers</h2>
+<p>Enter number 1:</p>
+<input id="a" type="number">
+<p>Enter number 2:</p>
+<input id="b" type="number">
+<p>Enter number 3:</p>
+<input id="c" type="number">
+<br><br>
+
+<button onclick="findGreatest()">Check</button>
+<h3>Result:</h3>
+<div id="result"></div>
+
+<script>
+function findGreatest() {
+
+
+let x = Number(document.getElementById("a").value);
+let y = Number(document.getElementById("b").value);
+let z = Number(document.getElementById("c").value);
+
+if (isNaN(x) || isNaN(y) || isNaN(z)) {
+document.getElementById("result").innerHTML = "Please enter valid number.";
+return;
+}
+
+
+if (x >= y && x >= z) {
+document.getElementById("result").innerHTML = "The largest number: " + x;
+} else if (y >= x && y >= z) {
+document.getElementById("result").innerHTML = "The largest number: " + y;
+} else {
+document.getElementById("result").innerHTML = "The largest number: " + z;
+}
+}
+</script>
+</body>
+</html>
